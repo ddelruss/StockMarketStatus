@@ -45,18 +45,15 @@
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setTimeZone:[NSTimeZone timeZoneWithName:@"America/New_York"]];
     [df setDateFormat:@"yyyy.MM.dd 'at' HH:mm zzz"];
-//    NSLog(@"testing date %@.",[df stringFromDate:aDate]);
     [df setDateFormat:@"HH"];
     int hours = [[df stringFromDate:aDate] intValue];
     if (hours < 16) {
         if (hours > 9) {
-//            NSLog(@"threshold before 16 and after 9");
             return YES;
         } else { // ==9
             [df setDateFormat:@"mm"];
             int minutes = [[df stringFromDate:aDate] intValue];
             if (minutes >= 30) {
-//                NSLog(@"Between 9:30 and 10.");
                 return YES;
             }
         }
@@ -72,7 +69,6 @@
     NSInteger weekday = [weekdayComponents weekday];
     // weekday 1 = Sunday for Gregorian calendar
 
-//    NSLog(@"Day of week is %i.",weekday);
     return weekday != 0 && weekday != 1;
 }
 
@@ -85,36 +81,26 @@
 
     [[self stockMarketHolidays] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [df setDateFormat:@"yyyy.MM.dd"];
-//        NSLog(@"comparing input date %@ to holiday %@.",[df stringFromDate:aDate],[df stringFromDate:obj]);
         if ([[df stringFromDate:obj] isEqualToString:[df stringFromDate:aDate]]) {  // holiday tests positive
-//            NSLog(@"Holiday tests positive.");
             [df setDateFormat:@"HH"];
             if ([[df stringFromDate:obj] isEqualToString:kStockMarketStatusTimeAllDay]) {  // all day holiday
                 answer = NO;
                 *stop = YES;
-//                NSLog(@"All day holiday.");
             } else {  // this is a holiday
-//                NSLog(@"Early market close...");
                 *stop = YES;
                 int hours = [[df stringFromDate:aDate] intValue];
                 if (hours < 13) {
                     if (hours > 9) {
- //                       NSLog(@"holiday threshold before 13 and after 9");
                     } else { // ==9
                         [df setDateFormat:@"mm"];
                         int minutes = [[df stringFromDate:aDate] intValue];
                         if (minutes < 30) {
-//                            NSLog(@"Early close, between 9:00 and 9:29.");
                             answer = NO;
-//                        } else {
-//                            NSLog(@"Early close, between 9:30 and 10.");
                         }
                     }
                 } else {
-//                    NSLog(@"After 1 pm");
                     answer = NO;
                 }
-
             }
         }
     }];
