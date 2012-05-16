@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB3231F91563FFB5005E3556 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3231F81563FFB5005E3556 /* UIKit.framework */; };
+		DB3231FB1563FFB5005E3556 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3231FA1563FFB5005E3556 /* Foundation.framework */; };
+		DB3231FD1563FFB5005E3556 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3231FC1563FFB5005E3556 /* CoreGraphics.framework */; };
+		DB3232031563FFB5005E3556 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB3232011563FFB5005E3556 /* InfoPlist.strings */; };
+		DB3232051563FFB5005E3556 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3232041563FFB5005E3556 /* main.m */; };
+		DB3232091563FFB5005E3556 /* StockMarketStatusAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3232081563FFB5005E3556 /* StockMarketStatusAppDelegate.m */; };
+		DB32320C1563FFB5005E3556 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB32320A1563FFB5005E3556 /* MainStoryboard_iPhone.storyboard */; };
+		DB32320F1563FFB5005E3556 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB32320D1563FFB5005E3556 /* MainStoryboard_iPad.storyboard */; };
+		DB3232121563FFB5005E3556 /* StockMarketStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3232111563FFB5005E3556 /* StockMarketStatusViewController.m */; };
+		DB32321A1563FFB5005E3556 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3232191563FFB5005E3556 /* SenTestingKit.framework */; };
+		DB32321B1563FFB5005E3556 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3231F81563FFB5005E3556 /* UIKit.framework */; };
+		DB32321C1563FFB5005E3556 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3231FA1563FFB5005E3556 /* Foundation.framework */; };
+		DB3232241563FFB5005E3556 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB3232221563FFB5005E3556 /* InfoPlist.strings */; };
+		DB3232271563FFB5005E3556 /* StockMarketStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3232261563FFB5005E3556 /* StockMarketStatusTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB32321D1563FFB5005E3556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB3231EB1563FFB5005E3556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB3231F31563FFB5005E3556;
+			remoteInfo = StockMarketStatus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB3231F41563FFB5005E3556 /* StockMarketStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockMarketStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3231F81563FFB5005E3556 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB3231FA1563FFB5005E3556 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB3231FC1563FFB5005E3556 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB3232001563FFB5005E3556 /* StockMarketStatus-Info.plist */ = {isa = PBXFileReference; path = "StockMarketStatus-Info.plist"; sourceTree = "<group>"; };
+		DB3232021563FFB5005E3556 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB3232041563FFB5005E3556 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB3232061563FFB5005E3556 /* StockMarketStatus-Prefix.pch */ = {isa = PBXFileReference; path = "StockMarketStatus-Prefix.pch"; sourceTree = "<group>"; };
+		DB3232071563FFB5005E3556 /* StockMarketStatusAppDelegate.h */ = {isa = PBXFileReference; path = StockMarketStatusAppDelegate.h; sourceTree = "<group>"; };
+		DB3232081563FFB5005E3556 /* StockMarketStatusAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockMarketStatusAppDelegate.m; sourceTree = "<group>"; };
+		DB32320B1563FFB5005E3556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		DB32320E1563FFB5005E3556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		DB3232101563FFB5005E3556 /* StockMarketStatusViewController.h */ = {isa = PBXFileReference; path = StockMarketStatusViewController.h; sourceTree = "<group>"; };
+		DB3232111563FFB5005E3556 /* StockMarketStatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockMarketStatusViewController.m; sourceTree = "<group>"; };
+		DB3232181563FFB5005E3556 /* StockMarketStatusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockMarketStatusTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3232191563FFB5005E3556 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DB3232211563FFB5005E3556 /* StockMarketStatusTests-Info.plist */ = {isa = PBXFileReference; path = "StockMarketStatusTests-Info.plist"; sourceTree = "<group>"; };
+		DB3232231563FFB5005E3556 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB3232251563FFB5005E3556 /* StockMarketStatusTests.h */ = {isa = PBXFileReference; path = StockMarketStatusTests.h; sourceTree = "<group>"; };
+		DB3232261563FFB5005E3556 /* StockMarketStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockMarketStatusTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB3231F11563FFB5005E3556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3231F91563FFB5005E3556 /* UIKit.framework in Frameworks */,
+				DB3231FB1563FFB5005E3556 /* Foundation.framework in Frameworks */,
+				DB3231FD1563FFB5005E3556 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3232141563FFB5005E3556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB32321A1563FFB5005E3556 /* SenTestingKit.framework in Frameworks */,
+				DB32321B1563FFB5005E3556 /* UIKit.framework in Frameworks */,
+				DB32321C1563FFB5005E3556 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB3231E91563FFB5005E3556 = {
+			isa = PBXGroup;
+			children = (
+				DB3231FE1563FFB5005E3556 /* StockMarketStatus */,
+				DB32321F1563FFB5005E3556 /* StockMarketStatusTests */,
+				DB3231F71563FFB5005E3556 /* Frameworks */,
+				DB3231F51563FFB5005E3556 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB3231F51563FFB5005E3556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB3231F41563FFB5005E3556 /* StockMarketStatus.app */,
+				DB3232181563FFB5005E3556 /* StockMarketStatusTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB3231F71563FFB5005E3556 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB3231F81563FFB5005E3556 /* UIKit.framework */,
+				DB3231FA1563FFB5005E3556 /* Foundation.framework */,
+				DB3231FC1563FFB5005E3556 /* CoreGraphics.framework */,
+				DB3232191563FFB5005E3556 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB3231FE1563FFB5005E3556 /* StockMarketStatus */ = {
+			isa = PBXGroup;
+			children = (
+				DB3232071563FFB5005E3556 /* StockMarketStatusAppDelegate.h */,
+				DB3232081563FFB5005E3556 /* StockMarketStatusAppDelegate.m */,
+				DB32320A1563FFB5005E3556 /* MainStoryboard_iPhone.storyboard */,
+				DB32320D1563FFB5005E3556 /* MainStoryboard_iPad.storyboard */,
+				DB3232101563FFB5005E3556 /* StockMarketStatusViewController.h */,
+				DB3232111563FFB5005E3556 /* StockMarketStatusViewController.m */,
+				DB3231FF1563FFB5005E3556 /* Supporting Files */,
+			);
+			path = StockMarketStatus;
+			sourceTree = "<group>";
+		};
+		DB3231FF1563FFB5005E3556 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB3232001563FFB5005E3556 /* StockMarketStatus-Info.plist */,
+				DB3232011563FFB5005E3556 /* InfoPlist.strings */,
+				DB3232041563FFB5005E3556 /* main.m */,
+				DB3232061563FFB5005E3556 /* StockMarketStatus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB32321F1563FFB5005E3556 /* StockMarketStatusTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB3232251563FFB5005E3556 /* StockMarketStatusTests.h */,
+				DB3232261563FFB5005E3556 /* StockMarketStatusTests.m */,
+				DB3232201563FFB5005E3556 /* Supporting Files */,
+			);
+			path = StockMarketStatusTests;
+			sourceTree = "<group>";
+		};
+		DB3232201563FFB5005E3556 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB3232211563FFB5005E3556 /* StockMarketStatusTests-Info.plist */,
+				DB3232221563FFB5005E3556 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB3231F31563FFB5005E3556 /* StockMarketStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB32322A1563FFB5005E3556 /* Build configuration list for PBXNativeTarget "StockMarketStatus" */;
+			buildPhases = (
+				DB3231F01563FFB5005E3556 /* Sources */,
+				DB3231F11563FFB5005E3556 /* Frameworks */,
+				DB3231F21563FFB5005E3556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StockMarketStatus;
+			productName = StockMarketStatus;
+			productReference = DB3231F41563FFB5005E3556 /* StockMarketStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB3232171563FFB5005E3556 /* StockMarketStatusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB32322D1563FFB5005E3556 /* Build configuration list for PBXNativeTarget "StockMarketStatusTests" */;
+			buildPhases = (
+				DB3232131563FFB5005E3556 /* Sources */,
+				DB3232141563FFB5005E3556 /* Frameworks */,
+				DB3232151563FFB5005E3556 /* Resources */,
+				DB3232161563FFB5005E3556 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB32321E1563FFB5005E3556 /* PBXTargetDependency */,
+			);
+			name = StockMarketStatusTests;
+			productName = StockMarketStatusTests;
+			productReference = DB3232181563FFB5005E3556 /* StockMarketStatusTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB3231EB1563FFB5005E3556 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = StockMarketStatus;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = DB3231EE1563FFB5005E3556 /* Build configuration list for PBXProject "StockMarketStatus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB3231E91563FFB5005E3556;
+			productRefGroup = DB3231F51563FFB5005E3556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB3231F31563FFB5005E3556 /* StockMarketStatus */,
+				DB3232171563FFB5005E3556 /* StockMarketStatusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB3231F21563FFB5005E3556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3232031563FFB5005E3556 /* InfoPlist.strings in Resources */,
+				DB32320C1563FFB5005E3556 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DB32320F1563FFB5005E3556 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3232151563FFB5005E3556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3232241563FFB5005E3556 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB3232161563FFB5005E3556 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB3231F01563FFB5005E3556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3232051563FFB5005E3556 /* main.m in Sources */,
+				DB3232091563FFB5005E3556 /* StockMarketStatusAppDelegate.m in Sources */,
+				DB3232121563FFB5005E3556 /* StockMarketStatusViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3232131563FFB5005E3556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3232271563FFB5005E3556 /* StockMarketStatusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB32321E1563FFB5005E3556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB3231F31563FFB5005E3556 /* StockMarketStatus */;
+			targetProxy = DB32321D1563FFB5005E3556 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB3232011563FFB5005E3556 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB3232021563FFB5005E3556 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB32320A1563FFB5005E3556 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB32320B1563FFB5005E3556 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DB32320D1563FFB5005E3556 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB32320E1563FFB5005E3556 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DB3232221563FFB5005E3556 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB3232231563FFB5005E3556 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB3232281563FFB5005E3556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB3232291563FFB5005E3556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB32322B1563FFB5005E3556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StockMarketStatus/StockMarketStatus-Prefix.pch";
+				INFOPLIST_FILE = "StockMarketStatus/StockMarketStatus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DB32322C1563FFB5005E3556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StockMarketStatus/StockMarketStatus-Prefix.pch";
+				INFOPLIST_FILE = "StockMarketStatus/StockMarketStatus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DB32322E1563FFB5005E3556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StockMarketStatus.app/StockMarketStatus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StockMarketStatus/StockMarketStatus-Prefix.pch";
+				INFOPLIST_FILE = "StockMarketStatusTests/StockMarketStatusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DB32322F1563FFB5005E3556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StockMarketStatus.app/StockMarketStatus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StockMarketStatus/StockMarketStatus-Prefix.pch";
+				INFOPLIST_FILE = "StockMarketStatusTests/StockMarketStatusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB3231EE1563FFB5005E3556 /* Build configuration list for PBXProject "StockMarketStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3232281563FFB5005E3556 /* Debug */,
+				DB3232291563FFB5005E3556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB32322A1563FFB5005E3556 /* Build configuration list for PBXNativeTarget "StockMarketStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB32322B1563FFB5005E3556 /* Debug */,
+				DB32322C1563FFB5005E3556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB32322D1563FFB5005E3556 /* Build configuration list for PBXNativeTarget "StockMarketStatusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB32322E1563FFB5005E3556 /* Debug */,
+				DB32322F1563FFB5005E3556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB3231EB1563FFB5005E3556 /* Project object */;
+}
