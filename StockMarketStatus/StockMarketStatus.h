@@ -11,11 +11,14 @@
 @interface StockMarketStatus : NSObject
 
 + (BOOL)stockMarketIsOpen;
++ (BOOL)stockMarketIsOpenToday; // not necessarily right now.
 + (BOOL)stockMarketIsClosed;
 + (BOOL)stockMarketIsAHoliday;
 + (BOOL)stockMarketOpenOnDate:(NSDate*)aDate;
 + (BOOL)stockMarketClosedOnDate:(NSDate*)aDate;
 + (BOOL)stockMarketHolidayOnDate:(NSDate*)aDate;
++ (NSDate*)stockMarketClose:(NSDate*)aDate;
 + (NSArray*)stockMarketHolidays;
++ (NSDateFormatter*)stockMarketStandardDateFormatter;
 
 @end

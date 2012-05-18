@@ -12,10 +12,15 @@
 
 @implementation StockMarketStatus
 
-+ (NSArray*)stockMarketHolidays { // needs to occasionally be updated for variable holidays
++ (NSDateFormatter*)stockMarketStandardDateFormatter {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setTimeZone:[NSTimeZone timeZoneWithName:@"America/New_York"]];
-    [df setDateFormat:@"yyyy.MM.dd HH:mm"];
+    df.timeZone = [NSTimeZone timeZoneWithName:@"America/New_York"];
+    df.dateFormat = @"yyyy.MM.dd HH:mm";
+    return  df;
+}
+
++ (NSArray*)stockMarketHolidays { // needs to occasionally be updated for variable holidays
+    NSDateFormatter *df = [self stockMarketStandardDateFormatter];
     return [NSArray arrayWithObjects:
             [df dateFromString:@"2012.12.25 01:00"],
             [df dateFromString:@"2012.05.28 01:00"],
@@ -42,9 +47,7 @@
 }
 
 + (BOOL)passTimeThreshold:(NSDate *)aDate { // returns true if between 9:30 am and 4 pm EST.
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setTimeZone:[NSTimeZone timeZoneWithName:@"America/New_York"]];
-    [df setDateFormat:@"yyyy.MM.dd 'at' HH:mm zzz"];
+    NSDateFormatter *df = [self stockMarketStandardDateFormatter];
     [df setDateFormat:@"HH"];
     int hours = [[df stringFromDate:aDate] intValue];
     if (hours < 16) {
@@ -68,14 +71,11 @@
     
     NSInteger weekday = [weekdayComponents weekday];
     // weekday 1 = Sunday for Gregorian calendar
-
-    return weekday != 0 && weekday != 1;
+    return weekday != 1 && weekday != 7;
 }
 
 + (BOOL)holidayTest:(NSDate *)aDate {
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setTimeZone:[NSTimeZone timeZoneWithName:@"America/New_York"]];
-    [df setDateFormat:@"yyyy.MM.dd HH:mm"];
+    NSDateFormatter *df = [self stockMarketStandardDateFormatter];
     
     BOOL __block answer = YES;
 
@@ -115,6 +115,15 @@
     return [self stockMarketOpenOnDate:[NSDate date]];
 }
   
++ (BOOL)stockMarketIsOpenToday {
+    NSDateFormatter *df = [self stockMarketStandardDateFormatter];
+    [df setDateFormat:@"yyyy.MM.dd"];
+    NSString *today = [[df stringFromDate:[NSDate date]] stringByAppendingString:@" 12:00"]; // always open at noon
+    [df setDateFormat:@"yyyy.MM.dd HH:mm"];
+
+    return [self stockMarketOpenOnDate:[df dateFromString:today]];
+}
+
 + (BOOL)stockMarketIsClosed {
     return ![self stockMarketIsOpen];
 }
@@ -124,14 +133,12 @@
 }
 
 + (BOOL)stockMarketHolidayOnDate:(NSDate *)aDate {
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setTimeZone:[NSTimeZone timeZoneWithName:@"America/New_York"]];
-    [df setDateFormat:@"yyyy.MM.dd HH:mm"];
+    NSDateFormatter *df = [self stockMarketStandardDateFormatter];
+    [df setDateFormat:@"yyyy.MM.dd"];
     
     BOOL __block answer = NO;
     
     [[self stockMarketHolidays] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [df setDateFormat:@"yyyy.MM.dd"];
         if ([[df stringFromDate:obj] isEqualToString:[df stringFromDate:aDate]]) {  // holiday tests positive
             answer = YES;
             *stop = YES;
@@ -142,6 +149,39 @@
 
 + (BOOL)stockMarketIsAHoliday {
     return [self stockMarketHolidayOnDate:[NSDate date]];
+}
+
++ (NSDate*)stockMarketClose:(NSDate *)aDate {
+    NSDateFormatter *df = [self stockMarketStandardDateFormatter];
+    df.dateFormat = @"yyyy.MM.dd";
+    NSString *theDate = [df stringFromDate:aDate];
+    NSString *hours = @"00";
+    NSString *minutes = @"00";
+    if ([self dayOfWeekTest:aDate]) {
+        BOOL __block earlyClose = NO;
+        BOOL __block holiday = NO;
+        [[self stockMarketHolidays] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            df.dateFormat = @"yyyy.MM.dd";
+            if ([[df stringFromDate:obj] isEqualToString:theDate]) {  // holiday tests positive
+                [df setDateFormat:@"HH"];
+                holiday = YES;
+                if (![[df stringFromDate:obj] isEqualToString:kStockMarketStatusTimeAllDay]) {
+                    earlyClose = YES;
+                } 
+                *stop = YES;
+            }
+        }];
+        if (earlyClose) {
+            hours = @"13";
+            minutes = @"15"; // account for delayed quotes            
+        }
+        if (!holiday) {
+            hours = @"16";
+            minutes = @"15";           
+        }
+    }
+    df.dateFormat = @"yyyy.MM.dd HH:mm";
+    return [df dateFromString:[theDate stringByAppendingFormat:@" %@:%@",hours,minutes]];
 }
 
 @end

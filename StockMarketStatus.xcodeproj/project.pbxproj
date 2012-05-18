@@ -21,6 +21,8 @@
 		DB32321C1563FFB5005E3556 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3231FA1563FFB5005E3556 /* Foundation.framework */; };
 		DB3232241563FFB5005E3556 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB3232221563FFB5005E3556 /* InfoPlist.strings */; };
 		DB3232271563FFB5005E3556 /* StockMarketStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3232261563FFB5005E3556 /* StockMarketStatusTests.m */; };
+		DB32323215640035005E3556 /* StockMarketStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DB32323115640035005E3556 /* StockMarketStatus.m */; };
+		DB32323315640035005E3556 /* StockMarketStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DB32323115640035005E3556 /* StockMarketStatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +40,24 @@
 		DB3231F81563FFB5005E3556 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DB3231FA1563FFB5005E3556 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB3231FC1563FFB5005E3556 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DB3232001563FFB5005E3556 /* StockMarketStatus-Info.plist */ = {isa = PBXFileReference; path = "StockMarketStatus-Info.plist"; sourceTree = "<group>"; };
+		DB3232001563FFB5005E3556 /* StockMarketStatus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StockMarketStatus-Info.plist"; sourceTree = "<group>"; };
 		DB3232021563FFB5005E3556 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB3232041563FFB5005E3556 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DB3232061563FFB5005E3556 /* StockMarketStatus-Prefix.pch */ = {isa = PBXFileReference; path = "StockMarketStatus-Prefix.pch"; sourceTree = "<group>"; };
-		DB3232071563FFB5005E3556 /* StockMarketStatusAppDelegate.h */ = {isa = PBXFileReference; path = StockMarketStatusAppDelegate.h; sourceTree = "<group>"; };
+		DB3232061563FFB5005E3556 /* StockMarketStatus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockMarketStatus-Prefix.pch"; sourceTree = "<group>"; };
+		DB3232071563FFB5005E3556 /* StockMarketStatusAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockMarketStatusAppDelegate.h; sourceTree = "<group>"; };
 		DB3232081563FFB5005E3556 /* StockMarketStatusAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockMarketStatusAppDelegate.m; sourceTree = "<group>"; };
 		DB32320B1563FFB5005E3556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		DB32320E1563FFB5005E3556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		DB3232101563FFB5005E3556 /* StockMarketStatusViewController.h */ = {isa = PBXFileReference; path = StockMarketStatusViewController.h; sourceTree = "<group>"; };
+		DB3232101563FFB5005E3556 /* StockMarketStatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockMarketStatusViewController.h; sourceTree = "<group>"; };
 		DB3232111563FFB5005E3556 /* StockMarketStatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockMarketStatusViewController.m; sourceTree = "<group>"; };
 		DB3232181563FFB5005E3556 /* StockMarketStatusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockMarketStatusTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3232191563FFB5005E3556 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		DB3232211563FFB5005E3556 /* StockMarketStatusTests-Info.plist */ = {isa = PBXFileReference; path = "StockMarketStatusTests-Info.plist"; sourceTree = "<group>"; };
+		DB3232211563FFB5005E3556 /* StockMarketStatusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StockMarketStatusTests-Info.plist"; sourceTree = "<group>"; };
 		DB3232231563FFB5005E3556 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DB3232251563FFB5005E3556 /* StockMarketStatusTests.h */ = {isa = PBXFileReference; path = StockMarketStatusTests.h; sourceTree = "<group>"; };
+		DB3232251563FFB5005E3556 /* StockMarketStatusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockMarketStatusTests.h; sourceTree = "<group>"; };
 		DB3232261563FFB5005E3556 /* StockMarketStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockMarketStatusTests.m; sourceTree = "<group>"; };
+		DB32323015640035005E3556 /* StockMarketStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockMarketStatus.h; sourceTree = "<group>"; };
+		DB32323115640035005E3556 /* StockMarketStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockMarketStatus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				DB32320D1563FFB5005E3556 /* MainStoryboard_iPad.storyboard */,
 				DB3232101563FFB5005E3556 /* StockMarketStatusViewController.h */,
 				DB3232111563FFB5005E3556 /* StockMarketStatusViewController.m */,
+				DB32323015640035005E3556 /* StockMarketStatus.h */,
+				DB32323115640035005E3556 /* StockMarketStatus.m */,
 				DB3231FF1563FFB5005E3556 /* Supporting Files */,
 			);
 			path = StockMarketStatus;
@@ -265,6 +271,7 @@
 				DB3232051563FFB5005E3556 /* main.m in Sources */,
 				DB3232091563FFB5005E3556 /* StockMarketStatusAppDelegate.m in Sources */,
 				DB3232121563FFB5005E3556 /* StockMarketStatusViewController.m in Sources */,
+				DB32323215640035005E3556 /* StockMarketStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB3232271563FFB5005E3556 /* StockMarketStatusTests.m in Sources */,
+				DB32323315640035005E3556 /* StockMarketStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

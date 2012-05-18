@@ -66,9 +66,33 @@
         NSLog(@"viewDidLoad reports stock market is NOT on holiday");
     }
 
+    if ([StockMarketStatus stockMarketIsOpenToday]) {
+        NSLog(@"Stock market is open today.");
+    } else {
+        NSLog(@"Stock market is NOT open today.");        
+    }
     
-    
-    
+    testDate = [df dateFromString:@"2012.07.02 9:45"];
+    NSLog(@"Stock market close on %@ is %@.",testDate,[df stringFromDate:[StockMarketStatus stockMarketClose:testDate]]);
+
+    testDate = [df dateFromString:@"2012.07.03 9:45"];
+    NSLog(@"Stock market close on %@ is %@.",testDate,[df stringFromDate:[StockMarketStatus stockMarketClose:testDate]]);
+
+    testDate = [df dateFromString:@"2012.07.04 9:45"];
+    NSLog(@"Stock market close on %@ is %@.",testDate,[df stringFromDate:[StockMarketStatus stockMarketClose:testDate]]);
+
+    testDate = [df dateFromString:@"2012.07.06 9:45"];
+    NSLog(@"Stock market close on %@ is %@.",testDate,[df stringFromDate:[StockMarketStatus stockMarketClose:testDate]]);
+
+    testDate = [df dateFromString:@"2012.07.07 9:45"];
+    NSLog(@"Stock market close on %@ is %@.",testDate,[df stringFromDate:[StockMarketStatus stockMarketClose:testDate]]);
+
+    testDate = [df dateFromString:@"2012.07.08 9:45"];
+    NSLog(@"Stock market close on %@ is %@.",testDate,[df stringFromDate:[StockMarketStatus stockMarketClose:testDate]]);
+
+    testDate = [df dateFromString:@"2012.07.09 9:45"];
+    NSLog(@"Stock market close on %@ is %@.",testDate,[df stringFromDate:[StockMarketStatus stockMarketClose:testDate]]);
+
     
     
 	// Do any additional setup after loading the view, typically from a nib.
